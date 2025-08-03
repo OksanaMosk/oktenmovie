@@ -1,0 +1,18 @@
+import {createBrowserRouter} from "react-router-dom";
+import App from "../App.tsx";
+import {MoviesPage} from "@/pages/movies-page/MoviesPage.tsx";
+import {MovieDetailsPage} from "@/pages/movieDetails-page/MovieDetailsPage.tsx";
+import {LoginPage} from "@/pages/login-page/LoginPage.tsx";
+import {RegisterPage} from "@/pages/register-page/RegisterPage.tsx";
+
+export const routes = createBrowserRouter([
+    {
+        path: '/', element: <App/>, children: [
+            {path: '/', element: <MoviesPage/>},
+            {path: 'movie/:id', element: <MovieDetailsPage/>},
+            {path: 'login', element: <LoginPage/>},
+            {path: 'register', element:<RegisterPage/>},
+
+        ]
+    }
+])

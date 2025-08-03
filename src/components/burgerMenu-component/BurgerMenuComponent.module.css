@@ -1,0 +1,106 @@
+.burgerMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30vw;
+    height: 100vh;
+    box-shadow: 0 0.625rem 1.25rem rgba(191, 219, 254, 0.5);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 1.5rem;
+    transition: transform 0.3s ease-in-out;
+    animation: slideIn 0.3s ease forwards;
+}
+.backgroundDark {
+    background-image: url("/images/bg-dark.webp");
+    background-size: auto 100%;
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+.backgroundLight {
+    background-image: url("/images/bg-light.webp");
+    background-size: auto 100%;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+.closeBtn {
+    align-self: flex-end;
+    font-size: 2rem;
+    color: var(--color-badgeId);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.closeBtn:hover {
+    color: var(--color-active);
+}
+.burgerLink {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    transition: color 0.2s;
+}
+.burgerLink:hover {
+    color: var(--color-blue-main);
+}
+.themeSwitcherBurger {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+}
+.themeButton {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 9999px;
+    border: 2px solid var(--color-indigo-900);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.themeButton:hover {
+    transform: scale(1.1);
+}
+.darkCircle {
+    background-color: var(--color-indigo-900);
+}
+.lightCircle {
+    background-color: var(--color-blue-main);
+}
+
+.burgerUserContainer {
+    padding: 1.5rem;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: flex-start;
+}
+.burgerUserAvatar {
+    width: 4rem;
+    height:4rem;
+    font-size: 1.5rem;
+}
+.burgerUserInfo {
+    gap:1.5rem;
+}
+.burgerUserWelcome {
+    font-size:1rem;
+}
+.burgerUserEmail,
+.burgerUserLogoutBtn{
+    font-size:0.5rem;
+}
