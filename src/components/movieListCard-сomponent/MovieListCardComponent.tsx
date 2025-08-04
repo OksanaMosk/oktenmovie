@@ -1,6 +1,6 @@
 import {MovieVideo} from "../movieVideo-component/MovieVideo.tsx";
 import {type FC, useState} from "react";
-import {useNavigate} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 import {VoteAverageComponent} from "../voteAverage-component/VoteAverageComponent.tsx";
 import type {IMovie} from "@/models/IMovie.ts";
 import type {IGenre} from "@/models/IGenre.ts";
@@ -17,11 +17,12 @@ export const MovieListCardComponent: FC<MoviesCardProps> = ({movie, genres, onGe
     const [show, setShow] = useState(false);
     const [hovered, setHovered] = useState(false);
     const navigate = useNavigate();
+    const location = useLocation();
     const genreNames = movie.genre_ids
         ?.map((id) => genres.find((g) => g.id === id)?.name)
         .filter(Boolean) as string[];
     const handleClick = () => {
-        if (!show) {
+        if (!show && location.pathname !== `${movie.id}`) {
             navigate(`${movie.id}`, {
                 state: {from: location.pathname + location.search},
             });
