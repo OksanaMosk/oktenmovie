@@ -1,5 +1,5 @@
 import {HeaderComponent} from "./components/header-component/HeaderComponent.tsx";
-import {Link, Outlet} from "react-router-dom";
+import {Outlet} from "react-router-dom";
 import {MyContext} from "./components/ThemeContextProvider.tsx";
 import {useEffect, useState} from "react";
 import {refreshThunk, logoutThunk, authSlice} from "./redux/slices/AuthSlice.ts";
@@ -62,7 +62,6 @@ function App() {
         >
             <div className={`${style.container}, ${themeColor}`}>
                 <HeaderComponent user={user} authenticated={authenticated} onLogout={handleLogout}/>
-                <Link to="movie/">Перейти до фільмів</Link>
                 <main  className={style.outlet}>
                     <Outlet/>
                 </main>
