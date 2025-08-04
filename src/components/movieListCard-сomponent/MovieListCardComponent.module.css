@@ -89,7 +89,7 @@
     justify-content: space-between;
     width: 80%;
     color: var(--color-blue-main);
-    font-size: 12px;
+    font-size: 10px;
 }
 .movieTitle {
     color: var(--color-border-indigo);
