@@ -22,7 +22,7 @@ export const MovieListCardComponent: FC<MoviesCardProps> = ({movie, genres, onGe
         .filter(Boolean) as string[];
     const handleClick = () => {
         if (!show) {
-            navigate(`/movie/${movie.id}`, {
+            navigate(`movie/${movie.id}`, {
                 state: {from: location.pathname + location.search},
             });
         }
@@ -56,7 +56,7 @@ export const MovieListCardComponent: FC<MoviesCardProps> = ({movie, genres, onGe
                 ) : (
                     <div className={styles.moviePosterPlaceholder}>
                         <img
-                            src="/images/movie-placeholder.png"
+                            src="/src/images/movie-placeholder.png"
                             alt="No poster"
                             className={styles.noImage}
                         />

@@ -36,7 +36,7 @@ export const MovieVideo = React.memo(({ movieId, onClose }: MovieVideoProps) => 
         ) : (
             <div className={styles.noTrailerContainer}>
                 <img
-                    src="/images/movie-placeholder.png"
+                    src="/src/images/movie-placeholder.png"
                     alt="No trailer"
                     className={styles.noTrailerImage}
                 /><span className={styles.noTrailerText}>No TRAILER available</span>

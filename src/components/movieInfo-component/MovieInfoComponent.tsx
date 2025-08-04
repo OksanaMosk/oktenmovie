@@ -5,6 +5,7 @@ import {IdMovieActions} from "@/redux/slices/IdMovieSlice.ts";
 import {LoaderComponent} from "@/components/loader-component/LoaderComponent.tsx";
 import {VoteAverageComponent} from "@/components/voteAverage-component/VoteAverageComponent.tsx";
 import styles from "./MovieInfoComponent.module.css";
+import moviePlaceholder from "../../images/movie-placeholder.png";
 
 type MovieProps = {
     movieId: number;
@@ -69,7 +70,7 @@ export const MovieInfoComponent:FC<MovieProps> = ({ movieId }) => {
                 ) : (
                     <div className={styles.noPoster}>
                         <img
-                            src="/images/movie-placeholder.png"
+                            src={moviePlaceholder}
                             alt="No poster"
                             className={styles.placeholder}
                         />

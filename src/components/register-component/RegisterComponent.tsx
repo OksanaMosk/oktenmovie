@@ -10,9 +10,9 @@ import { useForm, Controller } from "react-hook-form";
 import { joiResolver } from "@hookform/resolvers/joi";
 import { UserRegisterValidator } from "@/components/validators/UserRegisterValidator.ts";
 import type { IUser } from "@/models/IUser.ts";
-import userImg from "/images/user.png";
-import eye from "/images/eye.png";
-import noEye from "/images/noeye.png";
+import userImg from "../../images/user.png";
+import eye from "../../images/eye.png";
+import noEye from "../../images/noeye.png";
 import styles from "./RegisterComponent.module.css";
 
 type RegisterProps = {

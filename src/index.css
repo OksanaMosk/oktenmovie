@@ -8,7 +8,7 @@ body {
     scroll-behavior: smooth;
 }
 body.dark {
-    background-image: url("/images/bg-dark.webp");
+    background-image: url("/theme/bg-dark.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -16,12 +16,11 @@ body.dark {
 }
 
 body.light {
-    background-image: url("/images/bg-light.webp");
+    background-image: url("/theme/bg-light.webp");
     background-size: cover;
     background-position: top left;
     background-repeat: no-repeat;
     min-height: 100vh;
-
 }
 
 :root {

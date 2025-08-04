@@ -6,6 +6,8 @@ import { UserInfoComponent } from "@/components/userInfo-component/UserInfoCompo
 import {BurgerMenuComponent} from "@/components/burgerMenu-component/BurgerMenuComponent.tsx";
 import type { IUser } from "@/models/IUser.ts";
 import styles from "./HeaderComponent.module.css";
+import logo from '../../images/logo.png';
+
 
 type HeaderProps = {
     user: IUser | null;
@@ -26,7 +28,8 @@ export const HeaderComponent: FC<HeaderProps> = ({ user, authenticated, onLogout
         <header className={styles.header}>
             <div className={styles.inner}>
                 <div className={styles.logoBlock}>
-                    <img src="/images/logo.png" alt="Logo" className="w-10 h-10" />
+
+                    <img src={logo} alt="Logo" className="w-10 h-10" />
                     <div className={styles.logo}>
                         <h1 className={styles.logoTitle}>Not just movies...</h1>
                         <p className={styles.subtitle}>...new Dimensions</p>
@@ -36,8 +39,8 @@ export const HeaderComponent: FC<HeaderProps> = ({ user, authenticated, onLogout
                 <div className={styles.rightBlock}>
                     {!authenticated ? (
                         <div className={styles.authLinks}>
-                            <Link to="/login" state={{ from }} className="hover:underline">Sign In</Link>
-                            <Link to="/register" state={{ from }} className="hover:underline">Sign Up</Link>
+                            <Link to="login" state={{ from }} className="hover:underline">Sign In</Link>
+                            <Link to="register" state={{ from }} className="hover:underline">Sign Up</Link>
                         </div>
                     ) : (
                         user && <UserInfoComponent user={user} onLogout={onLogout} />

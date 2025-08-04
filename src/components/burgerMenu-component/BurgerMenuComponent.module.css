@@ -15,18 +15,20 @@
     transition: transform 0.3s ease-in-out;
     animation: slideIn 0.3s ease forwards;
 }
-.backgroundDark {
-    background-image: url("/images/bg-dark.webp");
-    background-size: auto 100%;
-    background-position: top right;
+body.dark {
+    background-image: url("/theme/bg-dark.webp");
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
-.backgroundLight {
-    background-image: url("/images/bg-light.webp");
-    background-size: auto 100%;
-    background-position: top center;
+body.light {
+    background-image: url("/theme/bg-light.webp");
+    background-size: cover;
+    background-position: top left;
     background-repeat: no-repeat;
+    min-height: 100vh;
 }
 @keyframes slideIn {
     from {
