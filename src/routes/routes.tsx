@@ -8,8 +8,8 @@ import {RegisterPage} from "@/pages/register-page/RegisterPage.tsx";
 export const routes = createHashRouter([
     {
         path: '/', element: <App/>, children: [
-            {index: true, element: <MoviesPage/> },
-            {path: 'movie/:id', element: <MovieDetailsPage/>},
+            {path: 'movie', element: <MoviesPage/> },
+            {path: ':id', element: <MovieDetailsPage/>},
             {path: 'login', element: <LoginPage/>},
             {path: 'register', element:<RegisterPage/>},
         ]

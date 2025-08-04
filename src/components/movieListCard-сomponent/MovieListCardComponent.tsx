@@ -22,7 +22,7 @@ export const MovieListCardComponent: FC<MoviesCardProps> = ({movie, genres, onGe
         .filter(Boolean) as string[];
     const handleClick = () => {
         if (!show) {
-            navigate(`movie/${movie.id}`, {
+            navigate(`/${movie.id}`, {
                 state: {from: location.pathname + location.search},
             });
         }
