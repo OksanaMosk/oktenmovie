@@ -15,7 +15,7 @@
     transition: transform 0.3s ease-in-out;
     animation: slideIn 0.3s ease forwards;
 }
-body.dark {
+.backgroundDark  {
     background-image: url("/theme/bg-dark.webp");
     background-size: cover;
     background-position: center;
@@ -23,7 +23,7 @@ body.dark {
     min-height: 100vh;
 }
 
-body.light {
+.backgroundLight{
     background-image: url("/theme/bg-light.webp");
     background-size: cover;
     background-position: top left;

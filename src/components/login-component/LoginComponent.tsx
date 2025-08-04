@@ -6,9 +6,9 @@ import {LoaderComponent} from "../loader-component/LoaderComponent.tsx";
 import {useForm, Controller} from "react-hook-form";
 import {joiResolver} from "@hookform/resolvers/joi";
 import {UserLoginValidator} from "@/components/validators/UserLoginValidator.ts";
-import userImg from "../../images/user.png";
-import eye from "../../images/eye.png";
-import noEye from "../../images/noeye.png";
+import userImg from "@/images/user.png";
+import eye from "@/images/eye.png";
+import noEye from "@/images/noeye.png";
 import styles from "./LoginComponent.module.css";
 
 

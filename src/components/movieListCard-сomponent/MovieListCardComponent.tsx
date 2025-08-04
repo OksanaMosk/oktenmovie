@@ -4,6 +4,7 @@ import {useLocation, useNavigate} from "react-router-dom";
 import {VoteAverageComponent} from "../voteAverage-component/VoteAverageComponent.tsx";
 import type {IMovie} from "@/models/IMovie.ts";
 import type {IGenre} from "@/models/IGenre.ts";
+import moviePlaceholder from "@/images/movie-placeholder.png";
 import styles from "./MovieListCardComponent.module.css";
 
 type MoviesCardProps = {
@@ -57,7 +58,7 @@ export const MovieListCardComponent: FC<MoviesCardProps> = ({movie, genres, onGe
                 ) : (
                     <div className={styles.moviePosterPlaceholder}>
                         <img
-                            src="/src/images/movie-placeholder.png"
+                            src={moviePlaceholder}
                             alt="No poster"
                             className={styles.noImage}
                         />

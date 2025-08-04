@@ -6,7 +6,7 @@ import { UserInfoComponent } from "@/components/userInfo-component/UserInfoCompo
 import {BurgerMenuComponent} from "@/components/burgerMenu-component/BurgerMenuComponent.tsx";
 import type { IUser } from "@/models/IUser.ts";
 import styles from "./HeaderComponent.module.css";
-import logo from '../../images/logo.png';
+import logo from '@/images/logo.png';
 
 
 type HeaderProps = {

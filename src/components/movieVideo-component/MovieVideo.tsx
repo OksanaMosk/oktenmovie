@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { VideoActions } from "@/redux/slices/VideoSlice.ts";
 import { LoaderComponent } from "../loader-component/LoaderComponent.tsx";
 import  styles from "./MovieVideo.module.css"
+import moviePlaceholder from "@/images/movie-placeholder.png";
 
 type MovieVideoProps = {
     movieId: number;
@@ -36,7 +37,7 @@ export const MovieVideo = React.memo(({ movieId, onClose }: MovieVideoProps) => 
         ) : (
             <div className={styles.noTrailerContainer}>
                 <img
-                    src="/src/images/movie-placeholder.png"
+                    src={moviePlaceholder}
                     alt="No trailer"
                     className={styles.noTrailerImage}
                 /><span className={styles.noTrailerText}>No TRAILER available</span>

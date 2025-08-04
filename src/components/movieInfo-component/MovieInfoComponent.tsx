@@ -5,7 +5,7 @@ import {IdMovieActions} from "@/redux/slices/IdMovieSlice.ts";
 import {LoaderComponent} from "@/components/loader-component/LoaderComponent.tsx";
 import {VoteAverageComponent} from "@/components/voteAverage-component/VoteAverageComponent.tsx";
 import styles from "./MovieInfoComponent.module.css";
-import moviePlaceholder from "../../images/movie-placeholder.png";
+import moviePlaceholder from "@/images/movie-placeholder.png";
 
 type MovieProps = {
     movieId: number;
